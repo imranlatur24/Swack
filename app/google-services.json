@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "740663065613",
+    "firebase_url": "https://swack-6f180.firebaseio.com",
+    "project_id": "swack-6f180",
+    "storage_bucket": "swack-6f180.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740663065613:android:ec3fa504b47b71b29fe944",
+        "android_client_info": {
+          "package_name": "com.swack.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740663065613-truiuetb0brr2ov5ghv511cdm7n9i98r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_Liv32kzkEANzX8iMPiZdRNBxP3yxME0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740663065613-truiuetb0brr2ov5ghv511cdm7n9i98r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

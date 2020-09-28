@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.TransportActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmitTransport"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_3sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/Black"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="@string/from"/>
+
+                <com.swack.customer.view.TextInputAutoCompleteTextView
+                    android:id="@+id/spinner_from"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:hint="@string/enter_district"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/round_corner_backgound"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/Black"
+                    android:text="@string/from_taluka"/>
+
+
+                <com.swack.customer.view.TextInputAutoCompleteTextView
+                    android:id="@+id/spinner_from_taluka"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:hint="From Taluka"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/round_corner_backgound"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/Black"
+                    android:text="@string/to"/>
+                <com.swack.customer.view.TextInputAutoCompleteTextView
+                    android:id="@+id/spinner_to"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:hint="To district"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/round_corner_backgound"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    />
+                <!--  <AutoCompleteTextView
+                      android:id="@+id/spinner_to"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="0.5"
+                      android:padding="@dimen/_3sdp"
+                      android:hint="Enter To District"
+                      android:background="@drawable/round_corner_backgound"/>
+  -->            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/Black"
+                    android:text="@string/from_village"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinner_from_village"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/_3sdp"
+                    android:background="@drawable/round_corner_backgound"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/Black"
+                    android:text="@string/to_taluka"/>
+
+                <com.swack.customer.view.TextInputAutoCompleteTextView
+                    android:id="@+id/spinner_to_taluka"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:hint="@string/enter_to_taluka"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/round_corner_backgound"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/Black"
+                    android:text="@string/to_village"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinner_to_village"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:padding="@dimen/_3sdp"
+                    android:background="@drawable/round_corner_backgound"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+               <!-- <com.swack.customer.view.TextInputAutoCompleteTextView
+                    android:id="@+id/spinner_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:hint="@string/enter_product_name"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/round_corner_backgound"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />-->
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/_15ssp"
+                    android:textColor="@color/Black"
+                    android:text="@string/product_unit"/>
+
+                <com.swack.customer.view.TextInputAutoCompleteTextView
+                    android:id="@+id/spinner_product_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:layout_weight="0.5"
+                    android:textColor="@color/black"
+                    android:hint="@string/enter_unit"
+                    android:padding="@dimen/_5sdp"
+                    android:inputType="number"
+                    android:background="@drawable/round_corner_backgound"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/transport_product"
+                android:layout_weight="0.5"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_product"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/round_corner_backgound"
+                    android:textColor="@android:color/black"
+                    android:hint="Enter Product" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/transport_address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_transport_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:lines="10"
+                    android:minLines="5"
+                    android:gravity="top|left"
+                    android:maxLines="10"
+                    android:hint="Search Location"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/transport_area"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="@android:color/black"
+                    android:hint="Enter Area" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/transport_price"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textColor="@android:color/black"
+                    android:hint="Price per Km" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSubmitTransport"
+        android:text="@string/submit"
+        android:background="@drawable/round_corner_red"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_margin="@dimen/_2sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

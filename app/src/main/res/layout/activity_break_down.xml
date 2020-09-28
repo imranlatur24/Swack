@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnSubmit"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_3sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/_3sdp">
+                <com.swack.customer.view.TextInputAutoCompleteTextView
+                    android:layout_weight="0.3"
+                    android:id="@+id/spinner_vehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:hint="@string/enter_vehicle"
+                    android:background="@drawable/round_corner_backgound"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:padding="@dimen/_5sdp"
+                    />
+                <Button
+                    android:id="@+id/btn_add_vehical"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_weight="0.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="Add Vehicle"/>
+            </LinearLayout>
+            <RadioGroup
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:id="@+id/radio"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <RadioButton
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="On Workshop" />
+                <RadioButton
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:id="@+id/radioMale"
+                    android:layout_gravity="left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="On Site Service" />
+
+
+            </RadioGroup>
+           <!-- <AutoCompleteTextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_3sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@drawable/round_corner_backgound" android:hint="@string/enter_service"
+                android:id="@+id/spinner_service"/>-->
+
+          <!--  <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:lines="10"
+                    android:minLines="5"
+                    android:gravity="top|left"
+                    android:maxLines="10"/>
+            </com.google.android.material.textfield.TextInputLayout>
+-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:padding="@dimen/_2sdp"
+                android:id="@+id/profile_address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_2sdp"
+                >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/edt_transport_address2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:lines="10"
+                android:minLines="5"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:hint="Search Location"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btnSubmit"
+                android:text="@string/submit"
+                android:background="@drawable/round_corner_red"
+                android:gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
